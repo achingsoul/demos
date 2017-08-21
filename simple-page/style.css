@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+}
+ul,ol{
+    list-style: none;
+    padding: 0;
+}
+/* logo 模块*/
+.logo{
+    text-align: center;
+}
+.logo > .img > img{ 
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-top: 60px;
+}
+.logo > .slogan {
+    margin-top: 28px;
+}
+.logo > .slogan > li{
+    background: #D8D8D8;
+    display: inline-block;
+    min-width: 128px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 24px;
+    padding: 1px 0;
+}
+
+/* banner 模块*/
+.banner{
+    background: #EFEFEF;
+    text-align: center;
+    padding-top: 46px;
+    padding-bottom: 50px;
+}
+.banner h2{
+    background: #D8D8D8;
+    display: inline-block;
+    border-radius: 14px;
+    min-width: 200px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 34px;
+    padding: 3px 0;
+}
+.banner .one-line-header h2{
+    padding-left: 2.75em;
+    padding-right: 2.75em;
+}
+.banner .one-line-header{
+    display: none;
+}
+@media (min-width:500px) {
+ .banner .two-lines-header{
+       display: none;
+   }
+ .banner .one-line-header{
+    display: block;      
+   }
+}
+.banner .details{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.banner .details p{
+    background: #E8E7E7;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 24px;
+    border-radius: 14px;
+    margin-top: 20px;
+}
+@media (min-width:500px) {
+ .banner .details p{
+    max-width: none;
+    margin-left: 52px;
+    margin-right: 52px;
+   }
+}
+/* products 模块*/
+.products{
+    margin: 0 16px;
+}
+.products>ol{
+    margin-top: 42px;
+}
+@media(min-width:500px){
+.products>ol{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+   }
+.products >ol>li{
+    width: calc(50% - 16px);
+    box-sizing: border-box;
+    }
+}
+@media(min-width:1000px){
+.products >ol>li{
+    width: calc(33.333333% - 21.333333px);
+    }
+}
+@media(min-width:1200px){
+    .products > ol { 
+    max-width: 928px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+}
+.products .product {
+    margin-top: 32px;
+}
+.products .product>img {
+    height: 180px;/*图片不需要写高度，它会自己算 */
+    /*background: #D8D8D8;*/
+    border-radius: 4px;
+}
+.products .product>h3 {
+    max-width: 204px;
+    background:#bcbcbc;
+    border-radius:4px;
+    line-height: 24px;
+    margin-top: 20px;
+    margin-bottom: 14px;
+}
+.products .product>p {
+    background:#ececec;
+    border-radius:4px;
+    line-height: 16px;
+    font-size: 14px;
+    margin-top: 14px;
+}
