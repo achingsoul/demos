@@ -1,0 +1,130 @@
+body{
+  background: #EEEEEE;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.wrapper{
+  border:1px solid #FAF9F8;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background-color: #F7F5F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 10px 20px #8F8477;
+
+}
+.clock{
+  background-color:#F7F6F4;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  box-shadow: inset 1px 1px 15px #8F8477;
+}
+
+.clock>.dot{
+  width:8px;
+  height:8px;
+  border: 1px solid #C56A58;
+  background-color: #C56A58;
+  border-radius:50%;
+  position:absolute;
+  left: 50%;
+  top: 50%;
+  margin-top:-2.5px;
+  margin-left:-3px;
+}
+
+.clock>.center{
+  width:20px;
+  height:20px;
+  border:1px solid #736960;
+  background-color:#685D52;
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  top:50%;
+  margin-top:-8.5px;
+  margin-left:-9px;
+  box-shadow:2px 5px 5px #8F8477;
+}
+
+.clock>.second-hand{
+  position:absolute;
+  left:60%;
+  top:50%;
+  transform-origin: 2px 3px;
+  transform: rotate(-90deg);
+  margin-left:-20px;
+  height:1px;
+  border:80px solid #C56A58;
+  border-top-width:3px;
+  border-bottom-width:3px;
+  border-top-color:transparent;
+  border-bottom-color:transparent;
+  border-right-color:transparent;
+}
+.clock>.minute-hand{
+  position:absolute;
+  left:50%;
+  height:8px;
+  background:#685D52;
+  border-radius:25px;
+  top:50%;
+  width:65px;
+  margin-top:-3px;
+  transform: rotate(-90deg);
+  transform-origin: 2px 4px;
+  box-shadow:-2px 3px 5px #C9C4BD;
+}
+.clock>.hour-hand{
+  position:absolute;
+  left:50%;
+  height:10px;
+  background:#685D52;
+  border-radius:30px;
+  top:50%;
+  width:50px;
+  margin-top:-2px;
+  transform:rotate(-90deg);
+  transform-origin:2px 4px;
+  box-shadow:-2px 3px 5px #C9C4BD;
+}
+.sz12{
+  color: #685D52;
+  position:absolute;
+  left:50%;
+  top:8%;
+  margin-left:-0.6em;
+  font-size: 18px;
+}
+.sz3{
+  color: #685D52;
+  position:absolute;
+  left:88%;
+  top:50%;
+  margin-top:-0.5em;
+  font-size: 18px;
+}
+.sz6{
+  color: #685D52;
+  position:absolute;
+  left:50%;
+  top:82%;
+  margin-left:-0.3em;
+  font-size: 18px;
+}
+.sz9{
+  color: #685D52;
+  position:absolute;
+  left:8%;
+  top:50%;
+  margin-top:-0.5em;
+  font-size: 18px;
+}
