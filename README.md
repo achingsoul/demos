@@ -4,5 +4,6 @@
 - demo-03：[时钟](https://achingsoul.github.io/demos/clock/clock.html)
 - demo-04：[3D-hover](https://achingsoul.github.io/demos/3D-hover/index.html)
 - demo-05：[轮播](https://achingsoul.github.io/demos/轮播/index.html)
+- demo-06：[移动端rem页面](https://achingsoul.github.io/demos/rem/index.html)
 
 
