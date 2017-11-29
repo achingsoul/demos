@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的 DOM 库</title>
+</head>
+
+<body>
+    <ul>
+        <li class="error">1</li>
+        <li class="error">2</li>
+        <li class="error">3</li>
+        <li class="error">4</li>
+    </ul>
+
+    <script src="dom.js"></script>
+    <script>
+        console.assert(typeof $ === 'function')
+        let items = $('li')
+        console.assert(items.on !== undefined)
+
+        items.on('click', function () {
+            console.log('click')
+        })
+
+        items.addClass('hi').removeClass('error')
+        console.assert(items.addClass('hi') === items)
+
+        items.text('你好')
+        let textList = items.text() // ['你好']*4
+        // console.log(textList) // jQuery -> '你好' 只返回数组中的第一个元素
+
+        console.assert(items.addEventListener === undefined)
+
+        let item = items.get(0)
+        let $item = $(item) // array
+
+        console.assert(item.tagName === 'LI')
+        console.assert(item.addEventListener !== undefined)
+
+        console.assert(item === items[0])
+
+        let $li = $('li:nth-child(2)') // array
+        $li.siblings().addClass('error')
+        console.assert($li.siblings().previousSelection === $li)
+        console.assert($li.siblings().end() === $li.siblings().previousSelection)
+
+        $li.siblings().removeClass('active').end()
+            .addClass('active')
+
+        console.assert(item.siblings === undefined)
+        console.assert($item.siblings !== undefined)
+
+        // $item 第一个 li
+        // $item.siblings()返回他的兄弟
+
+        console.assert($item[0] === item)
+
+        $item.siblings().addClass('hi2')
+
+        console.assert(typeof item.on === 'undefined')
+        console.assert(typeof $item.on === 'function')
+
+        console.log('运行完毕')
+    </script>
+
+    <style>
+        .hi {
+            color: red;
+            border: 1px solid;
+        }
+
+        .error {
+            color: blue;
+            border: 1px solid;
+        }
+
+        .active {
+            color: green;
+            border: 1px solid;
+        }
+    </style>
+</body>
+
+</html>
